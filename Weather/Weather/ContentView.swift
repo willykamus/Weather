@@ -8,11 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @EnvironmentObject var locationViewModel: LocationViewModel
+    
     var body: some View {
-        Text("Hello, world!")
+        Text("\(String(locationViewModel.location?.latitude ?? 0.0)) + \(String(locationViewModel.location?.longitude ?? 0.0))")
             .padding()
             .onAppear {
-                LocationSingleton.shared.requestLocation()
+                self.locationViewModel.requestLocation()
+                self.locationViewModel.getCurrentLocation()
             }
     }
 }
