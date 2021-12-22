@@ -20,7 +20,7 @@ class LocationSingleton: NSObject, CLLocationManagerDelegate {
     }
     
     func requestLocation() {
-        self.locationManager.requestWhenInUseAuthorization()
+        self.locationManager.requestAlwaysAuthorization()
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {

@@ -470,6 +470,9 @@
 				DEVELOPMENT_TEAM = 3JF6M2L57N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Please both";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Please always allow";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please when in usage";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -499,6 +502,9 @@
 				DEVELOPMENT_TEAM = 3JF6M2L57N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Please both";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Please always allow";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please when in usage";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
