@@ -9,12 +9,12 @@ import Foundation
 import CoreLocation
 
 protocol CityRemoteDataSource {
-    func getCity(latitude: CLLocationDegrees, longitude: CLLocationDegrees) async -> City
+    func getCity(location: Location) async -> City
 }
 
 class CityRemoteDataSourceImpl: CityRemoteDataSource {
-    func getCity(latitude: CLLocationDegrees, longitude: CLLocationDegrees) async -> City {
-        let location: CLLocation = CLLocation(latitude: latitude, longitude: longitude)
+    func getCity(location: Location) async -> City {
+        let location: CLLocation = CLLocation(latitude: location.latitude, longitude: location.longitude)
         do {
             let placemarks = try await CLGeocoder().reverseGeocodeLocation(location)
             if placemarks.isEmpty {

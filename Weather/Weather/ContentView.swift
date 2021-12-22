@@ -18,6 +18,7 @@ struct ContentView: View {
                 self.locationViewModel.requestLocation()
                 self.locationViewModel.getCurrentLocation()
             }
+        Text(locationViewModel.currentCity?.name ?? "")
     }
 }
 

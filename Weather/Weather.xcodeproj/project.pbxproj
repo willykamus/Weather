@@ -23,6 +23,7 @@
 		11C5F44427739DF70007C726 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C5F44327739DF70007C726 /* Location.swift */; };
 		11C5F4472773A09D0007C726 /* LocationSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C5F4462773A09D0007C726 /* LocationSingleton.swift */; };
 		11C5F4492773AC1E0007C726 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C5F4482773AC1E0007C726 /* LocationViewModel.swift */; };
+		11C5F44B2773B6FE0007C726 /* GetCurrentCityInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C5F44A2773B6FE0007C726 /* GetCurrentCityInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		11C5F44327739DF70007C726 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		11C5F4462773A09D0007C726 /* LocationSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSingleton.swift; sourceTree = "<group>"; };
 		11C5F4482773AC1E0007C726 /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
+		11C5F44A2773B6FE0007C726 /* GetCurrentCityInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCurrentCityInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 			children = (
 				11C5F43A27738F280007C726 /* RequestLocationInteractor.swift */,
 				11C5F44127739DCB0007C726 /* GetCurrentLocationInteractor.swift */,
+				11C5F44A2773B6FE0007C726 /* GetCurrentCityInteractor.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 				11C5F4492773AC1E0007C726 /* LocationViewModel.swift in Sources */,
 				11C5F4472773A09D0007C726 /* LocationSingleton.swift in Sources */,
 				11C5F43727738F160007C726 /* WeatherRemoteDataSource.swift in Sources */,
+				11C5F44B2773B6FE0007C726 /* GetCurrentCityInteractor.swift in Sources */,
 				11C5F44227739DCB0007C726 /* GetCurrentLocationInteractor.swift in Sources */,
 				11C5F43B27738F280007C726 /* RequestLocationInteractor.swift in Sources */,
 				11C5F43227738F000007C726 /* City.swift in Sources */,
