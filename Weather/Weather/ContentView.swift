@@ -6,29 +6,30 @@
 //
 
 import SwiftUI
+import CoreLocation
 
 struct ContentView: View {
     
     @EnvironmentObject var locationViewModel: LocationViewModel
-    @ObservedObject var weatherViewModel = WeatherViewModel()
+    @StateObject var weatherViewModel = WeatherViewModel()
     
     var body: some View {
-        Text("\(String(locationViewModel.location?.latitude ?? 0.0)) + \(String(locationViewModel.location?.longitude ?? 0.0))")
-            .padding()
-            .onAppear {
-                self.locationViewModel.requestLocation()
-                self.locationViewModel.getCurrentLocation()
-                Task {
-                    if let location = self.locationViewModel.location {
-                        await self.weatherViewModel.getCurrentCityWeather(location: location)
+        if let weather = weatherViewModel.currentCityWeather {
+            LocationWeatherCardView(weatherReport: weather)
+        } else {
+            if locationViewModel.location == nil {
+                ProgressView().progressViewStyle(.automatic).onAppear {
+                    locationViewModel.requestLocation()
+                    locationViewModel.getCurrentLocation()
+                }
+            } else {
+                ProgressView().progressViewStyle(.automatic).task {
+                    if let location = locationViewModel.location {
+                        await weatherViewModel.getCurrentCityWeather(location: location)
                     }
                 }
             }
-        
-        Text(locationViewModel.currentCity?.name ?? "")
-        Text(weatherViewModel.currentCityWeather?.description ?? "")
-        Text(weatherViewModel.currentCityWeather?.main ?? "")
-        Text(String(weatherViewModel.currentCityWeather?.temperatureReport.feelsLike.value ?? 0.0) ?? "")
+        }
     }
 }
 

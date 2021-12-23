@@ -22,11 +22,14 @@ class LocationSingleton: NSObject, CLLocationManagerDelegate {
     }
     
     func requestLocation() {
-        self.locationManager.requestAlwaysAuthorization()
+        self.locationManager.requestWhenInUseAuthorization()
+        self.locationManager.startUpdatingLocation()
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        self.location = Location(latitude: locations.first?.coordinate.latitude ?? 0.0, longitude: locations.first?.coordinate.longitude ?? 0.0)
+        if self.location == nil {
+            self.location = Location(latitude: locations.first?.coordinate.latitude ?? 0.0, longitude: locations.first?.coordinate.longitude ?? 0.0)
+        }
         completion?(self.location!)
         self.locationManager.stopUpdatingLocation()
     }
@@ -38,5 +41,9 @@ class LocationSingleton: NSObject, CLLocationManagerDelegate {
     func getCurrentLocation(completion: @escaping ((Location) -> Void)) {
         self.completion = completion
         self.locationManager.startUpdatingLocation()
+    }
+    
+    func isUserAcceptedLocationRequest() -> Bool {
+        return CLLocationManager.locationServicesEnabled()
     }
 }

@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct WeatherApp: App {
+    
+    var locationViewModel = LocationViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView().environmentObject(LocationViewModel())
+            ContentView().environmentObject(locationViewModel)
         }
     }
 }
