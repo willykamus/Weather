@@ -24,6 +24,8 @@
 		11C5F4472773A09D0007C726 /* LocationSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C5F4462773A09D0007C726 /* LocationSingleton.swift */; };
 		11C5F4492773AC1E0007C726 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C5F4482773AC1E0007C726 /* LocationViewModel.swift */; };
 		11C5F44B2773B6FE0007C726 /* GetCurrentCityInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C5F44A2773B6FE0007C726 /* GetCurrentCityInteractor.swift */; };
+		11C5F44D2773BF9F0007C726 /* GetCurrentWeatherInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C5F44C2773BF9F0007C726 /* GetCurrentWeatherInteractor.swift */; };
+		11C5F44F2773C1490007C726 /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C5F44E2773C1490007C726 /* WeatherViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,8 @@
 		11C5F4462773A09D0007C726 /* LocationSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSingleton.swift; sourceTree = "<group>"; };
 		11C5F4482773AC1E0007C726 /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
 		11C5F44A2773B6FE0007C726 /* GetCurrentCityInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCurrentCityInteractor.swift; sourceTree = "<group>"; };
+		11C5F44C2773BF9F0007C726 /* GetCurrentWeatherInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCurrentWeatherInteractor.swift; sourceTree = "<group>"; };
+		11C5F44E2773C1490007C726 /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +180,7 @@
 				11C5F43A27738F280007C726 /* RequestLocationInteractor.swift */,
 				11C5F44127739DCB0007C726 /* GetCurrentLocationInteractor.swift */,
 				11C5F44A2773B6FE0007C726 /* GetCurrentCityInteractor.swift */,
+				11C5F44C2773BF9F0007C726 /* GetCurrentWeatherInteractor.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -185,6 +190,7 @@
 			children = (
 				11C5F4462773A09D0007C726 /* LocationSingleton.swift */,
 				11C5F4482773AC1E0007C726 /* LocationViewModel.swift */,
+				11C5F44E2773C1490007C726 /* WeatherViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -322,6 +328,7 @@
 				11C5F43327738F000007C726 /* Weather.swift in Sources */,
 				11C5F43827738F160007C726 /* CityRemoteDataSource.swift in Sources */,
 				11C5F44427739DF70007C726 /* Location.swift in Sources */,
+				11C5F44F2773C1490007C726 /* WeatherViewModel.swift in Sources */,
 				11C5F40827738E430007C726 /* ContentView.swift in Sources */,
 				11C5F40627738E430007C726 /* WeatherApp.swift in Sources */,
 				11C5F4492773AC1E0007C726 /* LocationViewModel.swift in Sources */,
@@ -331,6 +338,7 @@
 				11C5F44227739DCB0007C726 /* GetCurrentLocationInteractor.swift in Sources */,
 				11C5F43B27738F280007C726 /* RequestLocationInteractor.swift in Sources */,
 				11C5F43227738F000007C726 /* City.swift in Sources */,
+				11C5F44D2773BF9F0007C726 /* GetCurrentWeatherInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
