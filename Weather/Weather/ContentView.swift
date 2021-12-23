@@ -28,6 +28,7 @@ struct ContentView: View {
         Text(locationViewModel.currentCity?.name ?? "")
         Text(weatherViewModel.currentCityWeather?.description ?? "")
         Text(weatherViewModel.currentCityWeather?.main ?? "")
+        Text(String(weatherViewModel.currentCityWeather?.temperatureReport.feelsLike.value ?? 0.0) ?? "")
     }
 }
 
