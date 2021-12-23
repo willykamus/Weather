@@ -26,6 +26,10 @@
 		11C5F44B2773B6FE0007C726 /* GetCurrentCityInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C5F44A2773B6FE0007C726 /* GetCurrentCityInteractor.swift */; };
 		11C5F44D2773BF9F0007C726 /* GetCurrentWeatherInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C5F44C2773BF9F0007C726 /* GetCurrentWeatherInteractor.swift */; };
 		11C5F44F2773C1490007C726 /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C5F44E2773C1490007C726 /* WeatherViewModel.swift */; };
+		11C5F45127740A7B0007C726 /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C5F45027740A7B0007C726 /* Temperature.swift */; };
+		11C5F45327740BC60007C726 /* TemperatureReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C5F45227740BC60007C726 /* TemperatureReport.swift */; };
+		11C5F456277414D50007C726 /* WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C5F455277414D50007C726 /* WeatherResponse.swift */; };
+		11C5F45927741CD20007C726 /* WeatherRemoteMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C5F45827741CD20007C726 /* WeatherRemoteMapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +72,10 @@
 		11C5F44A2773B6FE0007C726 /* GetCurrentCityInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCurrentCityInteractor.swift; sourceTree = "<group>"; };
 		11C5F44C2773BF9F0007C726 /* GetCurrentWeatherInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCurrentWeatherInteractor.swift; sourceTree = "<group>"; };
 		11C5F44E2773C1490007C726 /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
+		11C5F45027740A7B0007C726 /* Temperature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temperature.swift; sourceTree = "<group>"; };
+		11C5F45227740BC60007C726 /* TemperatureReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureReport.swift; sourceTree = "<group>"; };
+		11C5F455277414D50007C726 /* WeatherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponse.swift; sourceTree = "<group>"; };
+		11C5F45827741CD20007C726 /* WeatherRemoteMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRemoteMapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +169,8 @@
 				11C5F43027738F000007C726 /* City.swift */,
 				11C5F43127738F000007C726 /* Weather.swift */,
 				11C5F44327739DF70007C726 /* Location.swift */,
+				11C5F45027740A7B0007C726 /* Temperature.swift */,
+				11C5F45227740BC60007C726 /* TemperatureReport.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -168,6 +178,8 @@
 		11C5F43427738F050007C726 /* RemoteDataSource */ = {
 			isa = PBXGroup;
 			children = (
+				11C5F45727741CA30007C726 /* Mapper */,
+				11C5F454277414B90007C726 /* RemoteEntity */,
 				11C5F43627738F160007C726 /* CityRemoteDataSource.swift */,
 				11C5F43527738F160007C726 /* WeatherRemoteDataSource.swift */,
 			);
@@ -193,6 +205,22 @@
 				11C5F44E2773C1490007C726 /* WeatherViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		11C5F454277414B90007C726 /* RemoteEntity */ = {
+			isa = PBXGroup;
+			children = (
+				11C5F455277414D50007C726 /* WeatherResponse.swift */,
+			);
+			path = RemoteEntity;
+			sourceTree = "<group>";
+		};
+		11C5F45727741CA30007C726 /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				11C5F45827741CD20007C726 /* WeatherRemoteMapper.swift */,
+			);
+			path = Mapper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,9 +361,13 @@
 				11C5F40627738E430007C726 /* WeatherApp.swift in Sources */,
 				11C5F4492773AC1E0007C726 /* LocationViewModel.swift in Sources */,
 				11C5F4472773A09D0007C726 /* LocationSingleton.swift in Sources */,
+				11C5F456277414D50007C726 /* WeatherResponse.swift in Sources */,
+				11C5F45127740A7B0007C726 /* Temperature.swift in Sources */,
 				11C5F43727738F160007C726 /* WeatherRemoteDataSource.swift in Sources */,
+				11C5F45927741CD20007C726 /* WeatherRemoteMapper.swift in Sources */,
 				11C5F44B2773B6FE0007C726 /* GetCurrentCityInteractor.swift in Sources */,
 				11C5F44227739DCB0007C726 /* GetCurrentLocationInteractor.swift in Sources */,
+				11C5F45327740BC60007C726 /* TemperatureReport.swift in Sources */,
 				11C5F43B27738F280007C726 /* RequestLocationInteractor.swift in Sources */,
 				11C5F43227738F000007C726 /* City.swift in Sources */,
 				11C5F44D2773BF9F0007C726 /* GetCurrentWeatherInteractor.swift in Sources */,

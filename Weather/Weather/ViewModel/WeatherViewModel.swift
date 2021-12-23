@@ -9,12 +9,12 @@ import Foundation
 
 class WeatherViewModel: ObservableObject {
     
-    @Published var currentCityWeather: Weather?
+    @Published var currentCityWeather: WeatherReport?
     
     private var getCurrentWeatherInteractor: GetCurrentWeatherInteractor = GetCurrentWeatherInteractorImpl()
     
     func getCurrentCityWeather(location: Location) async {
-        let weather: Weather = await getCurrentWeatherInteractor.execute(location: location)
+        let weather: WeatherReport = await getCurrentWeatherInteractor.execute(location: location)
         Task {
             self.currentCityWeather = weather
         }
