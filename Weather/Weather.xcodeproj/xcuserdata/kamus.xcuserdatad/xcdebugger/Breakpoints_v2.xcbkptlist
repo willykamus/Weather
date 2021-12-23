@@ -55,32 +55,80 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "1E598163-F281-4256-8EA4-1602A024DB35"
+            uuid = "60A1BFA3-58D4-4963-A8F9-5BCB40C6923A"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Weather/ViewModel/LocationSingleton.swift"
+            filePath = "Weather/Interactors/GetCurrentWeatherInteractor.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "locationManager(_:didUpdateLocations:)"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "execute(location:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "60A1BFA3-58D4-4963-A8F9-5BCB40C6923A - 4bb923d4868adecb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) await resume partial function for Weather.GetCurrentWeatherInteractorImpl.execute(location: Weather.Location) async -&gt; Weather.Weather"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kamus/Weather/Weather/Weather/Interactors/GetCurrentWeatherInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "96">
+               </Location>
+               <Location
+                  uuid = "60A1BFA3-58D4-4963-A8F9-5BCB40C6923A - e19e68ee9d3e7ccc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for Weather.GetCurrentWeatherInteractorImpl.execute(location: Weather.Location) async -&gt; Weather.Weather"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kamus/Weather/Weather/Weather/Interactors/GetCurrentWeatherInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "76">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F894A89F-C13B-4215-B438-D83CEB131451"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Weather/RemoteDataSource/WeatherRemoteDataSource.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "getCurrentWeather(latitude:longitude:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A5BC1E52-E1A4-4CF0-8D3D-2E092EDFC923"
+            uuid = "98381D96-F137-47C5-9F8A-855A99B996D2"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Weather/ViewModel/LocationViewModel.swift"
+            filePath = "Weather/RemoteDataSource/WeatherRemoteDataSource.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "getCurrentCity()"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "getCurrentWeather(latitude:longitude:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
