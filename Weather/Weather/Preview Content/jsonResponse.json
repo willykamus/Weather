@@ -1,0 +1,44 @@
+{
+    "coord": {
+        "lon": -73.7119,
+        "lat": 45.5192
+    },
+    "weather": [
+        {
+            "id": 801,
+            "main": "Clouds",
+            "description": "few clouds",
+            "icon": "02d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": -12.28,
+        "feels_like": -17.17,
+        "temp_min": -13.69,
+        "temp_max": -11.05,
+        "pressure": 1022,
+        "humidity": 61
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 2.24,
+        "deg": 225,
+        "gust": 5.36
+    },
+    "clouds": {
+        "all": 20
+    },
+    "dt": 1640277864,
+    "sys": {
+        "type": 2,
+        "id": 2008745,
+        "country": "CA",
+        "sunrise": 1640262782,
+        "sunset": 1640294100
+    },
+    "timezone": -18000,
+    "id": 5917781,
+    "name": "Cartierville",
+    "cod": 200
+}
