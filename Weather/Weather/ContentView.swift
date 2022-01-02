@@ -21,6 +21,7 @@ struct ContentView: View {
                 ProgressView().progressViewStyle(.automatic).onAppear {
                     locationViewModel.requestLocation()
                     locationViewModel.getCurrentLocation()
+                    CoreDataLocalDataSource().get(string: "")
                 }
             } else {
                 ProgressView().progressViewStyle(.automatic).task {
