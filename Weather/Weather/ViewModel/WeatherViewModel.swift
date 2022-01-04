@@ -15,7 +15,7 @@ class WeatherViewModel: ObservableObject {
     
     func getCurrentCityWeather(location: Location) async {
         let weather: WeatherReport = await getCurrentWeatherInteractor.execute(location: location)
-        Task {
+        DispatchQueue.main.async {
             self.currentCityWeather = weather
         }
     }

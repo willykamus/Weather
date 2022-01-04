@@ -15,13 +15,16 @@ struct ContentView: View {
     
     var body: some View {
         if let weather = weatherViewModel.currentCityWeather {
-            LocationWeatherCardView(weatherReport: weather)
+            SearchCityView()
+//            LocationWeatherCardView(weatherReport: weather)
         } else {
             if locationViewModel.location == nil {
                 ProgressView().progressViewStyle(.automatic).onAppear {
                     locationViewModel.requestLocation()
                     locationViewModel.getCurrentLocation()
-                    CoreDataLocalDataSource().get(string: "")
+                    CoreDataCountryLocalDataSource().load()
+                    CoreDataLocalDataSource().load()
+                    
                 }
             } else {
                 ProgressView().progressViewStyle(.automatic).task {
