@@ -16,12 +16,12 @@ struct SearchCityView: View {
         NavigationView {
             List {
                 ForEach(viewModel.foundedCities) { city in
-                    Text("\(city.name),\(city.country)")
+                    Text("\(city.name), \(city.country)")
                 }
             }
             .id(UUID())
         }
-        .searchable(text: self.$searchText)
+        .searchable(text: self.$searchText, prompt: "Search for a city")
         .onChange(of: self.searchText) { newValue in
             self.viewModel.search(text: newValue)
         }
