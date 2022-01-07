@@ -15,7 +15,7 @@ struct WeatherReport: Identifiable {
     var temperatureReport: TemperatureReport
     
     static func empty() -> WeatherReport {
-        return WeatherReport(id: "", city: City(name: "", country: ""), main: "", description: "", temperatureReport: TemperatureReport(id: "", current: Temperature.empty(), dailyHigh: Temperature.empty(), dailyLow: Temperature.empty(), feelsLike: Temperature.empty()))
+        return WeatherReport(id: "", city: City(id: UUID(), name: "", country: ""), main: "", description: "", temperatureReport: TemperatureReport(id: "", current: Temperature.empty(), dailyHigh: Temperature.empty(), dailyLow: Temperature.empty(), feelsLike: Temperature.empty()))
     }
     
     func cityName() -> String {

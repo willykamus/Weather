@@ -12,6 +12,7 @@ class SearchCityViewModel: ObservableObject {
     @Published var foundedCities: [City] = []
     private var searchText: String = ""
     private let getSearchCitiesInteractor: GetSearchCitiesInteractor = GetSearchCitiesInteractorImpl()
+    private let saveSelectedCityInteractor: SaveSelectedCityInteractor = SaveSelectedCityInteractorImpl()
     
     func search(text: String) {
         
@@ -36,5 +37,10 @@ class SearchCityViewModel: ObservableObject {
         }
         
         self.searchText = text
+    }
+    
+    func save(city: City) {
+        print("Trying to save")
+        saveSelectedCityInteractor.execute(city: city)
     }
 }

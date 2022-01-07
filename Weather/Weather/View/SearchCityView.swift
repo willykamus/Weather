@@ -16,7 +16,11 @@ struct SearchCityView: View {
         NavigationView {
             List {
                 ForEach(viewModel.foundedCities) { city in
-                    Text("\(city.name), \(city.country)")
+                    Button {
+                        self.viewModel.save(city: city)
+                    } label: {
+                        Text("\(city.name), \(city.country)")
+                    }
                 }
             }
             .id(UUID())

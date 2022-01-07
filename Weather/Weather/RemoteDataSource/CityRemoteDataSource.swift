@@ -18,12 +18,12 @@ class CityRemoteDataSourceImpl: CityRemoteDataSource {
         do {
             let placemarks = try await CLGeocoder().reverseGeocodeLocation(location)
             if placemarks.isEmpty {
-                return City(name: "", country: "")
+                return City(id: UUID(), name: "", country: "")
             } else {
-                return City(name: placemarks[0].locality!, country: "")
+                return City(id: UUID(), name: placemarks[0].locality!, country: "")
             }
         } catch {
-            return City(name: "", country: "")
+            return City(id: UUID(), name: "", country: "")
         }
     }
 }
