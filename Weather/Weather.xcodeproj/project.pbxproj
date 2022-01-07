@@ -18,6 +18,7 @@
 		1126944D2783A10C006CCA3E /* countries.json in Resources */ = {isa = PBXBuildFile; fileRef = 1126944C2783A10C006CCA3E /* countries.json */; };
 		112694512783A1F6006CCA3E /* CountryLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112694502783A1F6006CCA3E /* CountryLocalDataSource.swift */; };
 		112694532783A249006CCA3E /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112694522783A249006CCA3E /* Country.swift */; };
+		11B0BB0B278738F300960957 /* SaveSelectedCityInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B0BB0A278738F300960957 /* SaveSelectedCityInteractor.swift */; };
 		11C5F40627738E430007C726 /* WeatherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C5F40527738E430007C726 /* WeatherApp.swift */; };
 		11C5F40827738E430007C726 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C5F40727738E430007C726 /* ContentView.swift */; };
 		11C5F40A27738E450007C726 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11C5F40927738E450007C726 /* Assets.xcassets */; };
@@ -75,6 +76,7 @@
 		1126944C2783A10C006CCA3E /* countries.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = countries.json; sourceTree = "<group>"; };
 		112694502783A1F6006CCA3E /* CountryLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryLocalDataSource.swift; sourceTree = "<group>"; };
 		112694522783A249006CCA3E /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		11B0BB0A278738F300960957 /* SaveSelectedCityInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveSelectedCityInteractor.swift; sourceTree = "<group>"; };
 		11C5F40227738E430007C726 /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11C5F40527738E430007C726 /* WeatherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherApp.swift; sourceTree = "<group>"; };
 		11C5F40727738E430007C726 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 				11C5F44A2773B6FE0007C726 /* GetCurrentCityInteractor.swift */,
 				11C5F44C2773BF9F0007C726 /* GetCurrentWeatherInteractor.swift */,
 				1126944A2782589C006CCA3E /* GetSearchCitiesInteractor.swift */,
+				11B0BB0A278738F300960957 /* SaveSelectedCityInteractor.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -440,6 +443,7 @@
 				11C5F45327740BC60007C726 /* TemperatureReport.swift in Sources */,
 				1126944527822161006CCA3E /* CityLocalModel.swift in Sources */,
 				11C5F43B27738F280007C726 /* RequestLocationInteractor.swift in Sources */,
+				11B0BB0B278738F300960957 /* SaveSelectedCityInteractor.swift in Sources */,
 				11C5F43227738F000007C726 /* City.swift in Sources */,
 				112694532783A249006CCA3E /* Country.swift in Sources */,
 				11C5F44D2773BF9F0007C726 /* GetCurrentWeatherInteractor.swift in Sources */,
