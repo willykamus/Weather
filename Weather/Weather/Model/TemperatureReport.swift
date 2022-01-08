@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct TemperatureReport: Identifiable {
+struct TemperatureReport: Identifiable, Hashable {
+
     var id: String = UUID().uuidString
     var current: Temperature
     var dailyHigh: Temperature

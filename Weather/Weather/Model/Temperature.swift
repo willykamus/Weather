@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Temperature {
+struct Temperature: Hashable {
     var value: Double
     var type: TemperatureType
     

@@ -20,7 +20,7 @@ class CoreDataCountryLocalDataSource: CountryLocalDataSource {
     static var countries: [Country] = []
     
     func load() {
-        if true {
+        if !UserDefaults.standard.bool(forKey: self.key) {
             do {
                 if let path = Bundle.main.path(forResource: "countries", ofType: "json") {
                     let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)

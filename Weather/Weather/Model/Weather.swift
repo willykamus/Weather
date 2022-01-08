@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct WeatherReport: Identifiable {
+struct WeatherReport: Identifiable, Hashable  {
+
     var id: String
     var city: City
     var main: String
