@@ -10,6 +10,7 @@ import CoreLocation
 
 protocol CityRemoteDataSource {
     func getCity(location: Location) async -> City
+    func getCoordinates(city: City) async -> CLLocation
 }
 
 class CityRemoteDataSourceImpl: CityRemoteDataSource {
@@ -24,6 +25,19 @@ class CityRemoteDataSourceImpl: CityRemoteDataSource {
             }
         } catch {
             return City(id: UUID(), name: "", country: "")
+        }
+    }
+    
+    func getCoordinates(city: City) async -> CLLocation {
+        let geocoder = CLGeocoder()
+        do {
+            let placemarks = try await geocoder.geocodeAddressString("\(city.name), \(city.country)")
+            if let placemark = placemarks.first {
+                return placemark.location!
+            }
+            return CLLocation(latitude: 0.0, longitude: 0.0)
+        } catch {
+            return CLLocation(latitude: 0.0, longitude: 0.0)
         }
     }
 }

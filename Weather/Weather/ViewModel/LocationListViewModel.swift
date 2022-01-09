@@ -13,6 +13,7 @@ class LocationListViewModel: ObservableObject {
     
     private let getSavedCitiesInteractor: GetSavedCitiesInteractor = GetSavedCitiesInteractorImpl()
     private let getCurrentWeatherForCityInteractor: GetCurrentWeatherForCityInteractor = GetCurrentWeatherForCityInteractorImpl()
+    private let coordinates = GetCoordinatesInteractorImpl()
     
     func getCurrentWeatherForSavedCities() async {
         self.weatherReports.removeAll()
@@ -23,5 +24,8 @@ class LocationListViewModel: ObservableObject {
             reports.append(report)
         }
         self.weatherReports.append(contentsOf: reports)
+        let jjj = await coordinates.execute(city: savedCities[1])
+        print(jjj.coordinate.latitude)
+        print(jjj.coordinate.longitude)
     }
 }
