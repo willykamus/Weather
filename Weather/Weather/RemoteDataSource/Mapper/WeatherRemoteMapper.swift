@@ -8,8 +8,20 @@
 import Foundation
 
 class WeatherRemoteMapper {
-    func toWeather(remoteEntity: FullWeatherRemoteResponse) -> WeatherReport {
-        let temperatureReport = TemperatureReport(id: UUID().uuidString, current: Temperature(value: remoteEntity.main.temp, type: .current), dailyHigh: Temperature(value: remoteEntity.main.temp_max, type: .dailyHigh), dailyLow: Temperature(value: remoteEntity.main.temp_min, type: .dailyLow), feelsLike: Temperature(value: remoteEntity.main.feels_like, type: .feelsLike))
-        return WeatherReport(id: String(remoteEntity.weather[0].id), city: City(id: UUID(), name: remoteEntity.name, country: ""), main: remoteEntity.weather[0].main, description: remoteEntity.weather[0].description, temperatureReport: temperatureReport)
+    
+    func toWeather(oneCallResponse: OneCallResponse, city: City) -> WeatherReport {
+        var hourlyReport: [Temperature] = []
+        for i in 1..<6 {
+            hourlyReport.append(Temperature(value: oneCallResponse.hourly[i].temp, date: Date(timeIntervalSince1970: oneCallResponse.hourly[i].dt)))
+        }
+        let currentTemperature = oneCallResponse.current
+        let currentReport = CurrentTemperatureReport(current: Temperature(value: currentTemperature.temp, date: Date()), feelsLike: Temperature(value: currentTemperature.feels_like, date: Date()))
+        let dailyTemperature = oneCallResponse.daily.first!
+        let dailyReport = DailyTemperatureReport(dailyLow: Temperature(value: dailyTemperature.temp.min, date: Date(timeIntervalSince1970: dailyTemperature.dt)), dailyHigh: Temperature(value: dailyTemperature.temp.max, date: Date(timeIntervalSince1970: dailyTemperature.dt)))
+        let currentWeather = oneCallResponse.current.weather.first!
+        let currentWeatherDescription = CurrentWeatherDescription(id: currentWeather.id, main: currentWeather.main, description: currentWeather.description)
+        return WeatherReport(city: city, currentWeatherDescription: currentWeatherDescription, temperatureReport: TemperatureReport(currentReport: currentReport, dailyReport: dailyReport, hourly: HourlyTemperatureReport(hourly: hourlyReport)))
+        
     }
+
 }

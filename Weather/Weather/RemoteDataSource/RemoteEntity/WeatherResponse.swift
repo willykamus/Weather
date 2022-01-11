@@ -16,6 +16,42 @@ struct FullWeatherRemoteResponse: Decodable {
     
 }
 
+struct CurrentReport: Decodable {
+    var dt: Double
+    var temp: Double
+    var feels_like: Double
+    var weather: [WeatherRemoteResponse]
+}
+
+struct OneCallResponse: Decodable {
+    var lat: Double
+    var lon: Double
+    var timezone_offset: Double
+    var timezone: String
+    var current: CurrentReport
+    var hourly: [HourlyReport]
+    var daily: [DailyReport]
+}
+
+struct HourlyReport: Decodable {
+    var dt: Double
+    var temp: Double
+    var feels_like: Double
+    var weather: [WeatherRemoteResponse]
+    var pop: Double
+}
+
+struct DailyReport: Decodable {
+    var dt: Double
+    var temp: TemperatureRemoteResponse
+}
+
+struct TemperatureRemoteResponse: Decodable {
+    var day: Double
+    var min: Double
+    var max: Double
+}
+
 struct CoordinatesRemoteResponse: Decodable {
     var lon: Double
     var lat: Double

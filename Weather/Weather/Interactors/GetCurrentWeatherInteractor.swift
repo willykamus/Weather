@@ -7,14 +7,14 @@
 
 import Foundation
 
-protocol GetCurrentWeatherInteractor {
-    func execute(location: Location) async -> WeatherReport
-}
-
-class GetCurrentWeatherInteractorImpl: GetCurrentWeatherInteractor {
-    
-    func execute(location: Location) async -> WeatherReport {
-        let weatherRemoteDataSource: WeatherRemoteDataSource = WeatherRemoteDataSourceImpl()
-        return await weatherRemoteDataSource.getCurrentWeather(latitude: location.latitude, longitude: location.longitude)
-    }
-}
+//protocol GetCurrentWeatherInteractor {
+//    func execute(location: Location) async -> WeatherReport
+//}
+//
+//class GetCurrentWeatherInteractorImpl: GetCurrentWeatherInteractor {
+//    
+//    func execute(location: Location) async -> WeatherReport {
+//        let weatherRemoteDataSource: WeatherRemoteDataSource = WeatherRemoteDataSourceImpl()
+//        return await weatherRemoteDataSource.getCurrentWeather(latitude: location.latitude, longitude: location.longitude)
+//    }
+//}

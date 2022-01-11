@@ -12,8 +12,8 @@ class PreviewWeatherReport {
         do {
             if let path = Bundle.main.path(forResource: "jsonResponse", ofType: "json") {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-                let remoteEntity = try JSONDecoder().decode(FullWeatherRemoteResponse.self, from: data)
-                return WeatherRemoteMapper().toWeather(remoteEntity: remoteEntity)
+                let remoteEntity = try JSONDecoder().decode(OneCallResponse.self, from: data)
+                return WeatherRemoteMapper().toWeather(oneCallResponse: remoteEntity, city: City(id: UUID(), name: "Caracas", country: "Venezuela"))
             }
             return WeatherReport.empty()
         } catch {

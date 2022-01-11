@@ -9,15 +9,15 @@ import Foundation
 
 class WeatherViewModel: ObservableObject {
     
-    @Published var currentCityWeather: WeatherReport?
-    
-    private var getCurrentWeatherInteractor: GetCurrentWeatherInteractor = GetCurrentWeatherInteractorImpl()
-    
-    func getCurrentCityWeather(location: Location) async {
-        let weather: WeatherReport = await getCurrentWeatherInteractor.execute(location: location)
-        DispatchQueue.main.async {
-            self.currentCityWeather = weather
-        }
-    }
+//    @Published var currentCityWeather: WeatherReport?
+//    
+//    private var getCurrentWeatherInteractor: GetCurrentWeatherInteractor = GetCurrentWeatherInteractorImpl()
+//    
+//    func getCurrentCityWeather(location: Location) async {
+//        let weather: WeatherReport = await getCurrentWeatherInteractor.execute(location: location)
+//        DispatchQueue.main.async {
+//            self.currentCityWeather = weather
+//        }
+//    }
     
 }

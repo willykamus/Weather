@@ -7,26 +7,23 @@
 
 import Foundation
 
-struct TemperatureReport: Identifiable {
+struct TemperatureReport: Identifiable, Hashable {
     var id: String = UUID().uuidString
+    var currentReport: CurrentTemperatureReport
+    var dailyReport: DailyTemperatureReport
+    var hourly: HourlyTemperatureReport
+}
+
+struct CurrentTemperatureReport: Hashable {
     var current: Temperature
-    var dailyHigh: Temperature
-    var dailyLow: Temperature
     var feelsLike: Temperature
-    
-    func getCurrentTemperature() -> String {
-        return String(format: "%.0f", round(self.current.value))
-    }
-    
-    func getDailyHigh() -> String {
-        return String(format: "%.0f", round(self.dailyHigh.value))
-    }
-    
-    func getDailyLow() -> String {
-        return String(format: "%.0f", round(self.dailyLow.value))
-    }
-    
-    func getFeelsLike() -> String {
-        return String(format: "%.0f", round(self.feelsLike.value))
-    }
+}
+
+struct DailyTemperatureReport: Hashable {
+    var dailyLow: Temperature
+    var dailyHigh: Temperature
+}
+
+struct HourlyTemperatureReport: Hashable {
+    var hourly: [Temperature]
 }

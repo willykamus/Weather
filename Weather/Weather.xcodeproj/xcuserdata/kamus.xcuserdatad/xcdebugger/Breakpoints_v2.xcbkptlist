@@ -62,26 +62,10 @@
             filePath = "Weather/RemoteDataSource/WeatherRemoteDataSource.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "getCurrentWeather(latitude:longitude:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E28D6D19-ECAF-4237-8438-00B64E033B19"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Weather/Preview Content/PreviewWeatherReport.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
-            landmarkName = "getWeatherReport()"
-            landmarkType = "7">
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "WeatherRemoteDataSourceImpl"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -110,8 +94,8 @@
             filePath = "Weather/LocalDataSource/CityLocalDataSource.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
             landmarkName = "get(string:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -135,32 +119,64 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "683AD3DB-AA8C-450D-8680-A6D345AC0CAD"
+            uuid = "3367D3E9-8172-433D-BEAB-6E1A73F4F745"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Weather/LocalDataSource/CityLocalDataSource.swift"
+            filePath = "Weather/ViewModel/LocationListViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "26"
             endingLineNumber = "26"
-            landmarkName = "save(city:)"
+            landmarkName = "getCurrentWeatherForSavedCities()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3367D3E9-8172-433D-BEAB-6E1A73F4F745 - 94bc930f5c4e1144"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for Weather.LocationListViewModel.getCurrentWeatherForSavedCities() async -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kamus/Weather/Weather/Weather/ViewModel/LocationListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "1070">
+               </Location>
+               <Location
+                  uuid = "3367D3E9-8172-433D-BEAB-6E1A73F4F745 - 9fd941f59a34dd46"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for Weather.LocationListViewModel.getCurrentWeatherForSavedCities() async -&gt; ()"
+                  moduleName = "Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kamus/Weather/Weather/Weather/ViewModel/LocationListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "805">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "4164E8AD-A6CA-48C2-9287-B9CA1C39FEBE"
+            uuid = "4BC3BE08-3F0F-4AE3-BC57-2AFC7B7D640C"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Weather/LocalDataSource/CityLocalDataSource.swift"
+            filePath = "Weather/Model/Weather.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "save(city:)"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "firstHourFromNow()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

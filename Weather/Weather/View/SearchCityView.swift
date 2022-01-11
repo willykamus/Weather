@@ -9,8 +9,10 @@ import SwiftUI
 
 struct SearchCityView: View {
     
+    @Binding var isPresented: Bool
     @State var searchText: String = ""
     @ObservedObject var viewModel: SearchCityViewModel = SearchCityViewModel()
+    @EnvironmentObject var locationListViewModel: LocationListViewModel
     
     var body: some View {
         NavigationView {
@@ -18,6 +20,10 @@ struct SearchCityView: View {
                 ForEach(viewModel.foundedCities) { city in
                     Button {
                         self.viewModel.save(city: city)
+                        Task {
+                            await self.locationListViewModel.getWeatherReportForSelectedCity(city: city)
+                        }
+                        self.isPresented.toggle()
                     } label: {
                         Text("\(city.name), \(city.country)")
                     }
@@ -34,6 +40,6 @@ struct SearchCityView: View {
 
 struct SearchCityView_Previews: PreviewProvider {
     static var previews: some View {
-        SearchCityView()
+        SearchCityView(isPresented: .constant(true))
     }
 }

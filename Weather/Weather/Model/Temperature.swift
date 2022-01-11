@@ -7,19 +7,44 @@
 
 import Foundation
 
-struct Temperature {
-    var value: Double
-    var type: TemperatureType
-    
-    static func empty() -> Temperature {
-        return Temperature(value: 0.0, type: .na)
-    }
+protocol TemperatureModel {
+    var value: Double { get set }
+    var date: Date { get set }
 }
 
-enum TemperatureType {
-    case dailyHigh
-    case dailyLow
-    case feelsLike
-    case current
-    case na
+struct Temperature: TemperatureModel, Hashable {
+    var value: Double
+    var date: Date
+    
+    static func empty() -> Temperature {
+        return Temperature(value: 0.0, date: Date(timeIntervalSince1970: 0))
+    }
+    
 }
+
+//struct Temperature: Hashable {
+//    var value: Double
+//    var type: TemperatureType
+//
+//    static func empty() -> Temperature {
+//        return Temperature(value: 0.0, type: .na)
+//    }
+//}
+
+//enum TemperatureType {
+//    case dailyHigh
+//    case dailyLow
+//    case feelsLike
+//    case current
+//    case hourly
+//    case na
+//}
+//
+//struct FeelsLikeTemperature: Temperature {
+//    var value: Double
+//}
+//
+//struct HourlyTemperature: Temperature, Hashable {
+//    var value: Double
+//    var date: Date
+//}

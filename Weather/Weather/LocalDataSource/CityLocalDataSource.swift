@@ -9,14 +9,34 @@ import Foundation
 import CoreData
 
 protocol CityLocalDataSource {
+    func getSavedCities() -> [City]
     func get(string: String) -> [City]
     func save(city: City)
     func load()
 }
 
 class CoreDataLocalDataSource: CityLocalDataSource {
-    
+
     private let key: String = "CitiesLoaded"
+    
+    func getSavedCities() -> [City] {
+        let fetchRequest: NSFetchRequest<LSavedCities> = LSavedCities.fetchRequest()// An NSFetchRequest
+        let viewContext = PersistenceController.shared.container.viewContext
+        do {
+            if let savedCities = try viewContext.fetch(fetchRequest).first {
+                var cities: [City] = []
+                let foundCities = savedCities.cities?.allObjects as! [LCity]
+                for city in foundCities {
+                    cities.append(City(id: city.id!, name: city.name!, country: city.country!))
+                }
+                return cities
+            }
+            return []
+        } catch {
+            return []
+        }
+            
+    }
     
     func save(city: City) {
         let fetchRequest: NSFetchRequest<LSavedCities> = LSavedCities.fetchRequest()// An NSFetchRequest
