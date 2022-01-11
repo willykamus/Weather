@@ -24,8 +24,10 @@ class LocationListViewModel: ObservableObject {
             reports.append(report)
         }
         self.weatherReports.append(contentsOf: reports)
-        let jjj = await coordinates.execute(city: savedCities[1])
-        print(jjj.coordinate.latitude)
-        print(jjj.coordinate.longitude)
+    }
+    
+    func getWeatherReportForSelectedCity(city: City) async {
+        let report = await self.getCurrentWeatherForCityInteractor.execute(city: city)
+        self.weatherReports.append(report)
     }
 }

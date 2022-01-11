@@ -21,7 +21,7 @@ struct SearchCityView: View {
                     Button {
                         self.viewModel.save(city: city)
                         Task {
-                            await self.locationListViewModel.getCurrentWeatherForSavedCities()
+                            await self.locationListViewModel.getWeatherReportForSelectedCity(city: city)
                         }
                         self.isPresented.toggle()
                     } label: {

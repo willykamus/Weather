@@ -25,6 +25,7 @@
 		11B0BB132788DDF000960957 /* GetCurrentWeatherForCityInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B0BB122788DDF000960957 /* GetCurrentWeatherForCityInteractor.swift */; };
 		11B0BB152788E7BE00960957 /* SplashScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B0BB142788E7BD00960957 /* SplashScreenViewModel.swift */; };
 		11B0BB17278B987100960957 /* GetCoordinatesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B0BB16278B987100960957 /* GetCoordinatesInteractor.swift */; };
+		11B0BB19278C958900960957 /* CoordinatesLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B0BB18278C958900960957 /* CoordinatesLocalDataSource.swift */; };
 		11C5F40627738E430007C726 /* WeatherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C5F40527738E430007C726 /* WeatherApp.swift */; };
 		11C5F40827738E430007C726 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C5F40727738E430007C726 /* ContentView.swift */; };
 		11C5F40A27738E450007C726 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11C5F40927738E450007C726 /* Assets.xcassets */; };
@@ -89,6 +90,7 @@
 		11B0BB122788DDF000960957 /* GetCurrentWeatherForCityInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCurrentWeatherForCityInteractor.swift; sourceTree = "<group>"; };
 		11B0BB142788E7BD00960957 /* SplashScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewModel.swift; sourceTree = "<group>"; };
 		11B0BB16278B987100960957 /* GetCoordinatesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCoordinatesInteractor.swift; sourceTree = "<group>"; };
+		11B0BB18278C958900960957 /* CoordinatesLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatesLocalDataSource.swift; sourceTree = "<group>"; };
 		11C5F40227738E430007C726 /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11C5F40527738E430007C726 /* WeatherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherApp.swift; sourceTree = "<group>"; };
 		11C5F40727738E430007C726 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				1126943D27821C5B006CCA3E /* CityLocalDataSource.swift */,
 				1126944427822161006CCA3E /* CityLocalModel.swift */,
 				112694502783A1F6006CCA3E /* CountryLocalDataSource.swift */,
+				11B0BB18278C958900960957 /* CoordinatesLocalDataSource.swift */,
 			);
 			path = LocalDataSource;
 			sourceTree = "<group>";
@@ -449,6 +452,7 @@
 				11B0BB11278891CE00960957 /* GetSavedCitiesInteractor.swift in Sources */,
 				11CBB7FC2774D8D600B2F3ED /* LocationWeatherCardView.swift in Sources */,
 				11C5F4492773AC1E0007C726 /* LocationViewModel.swift in Sources */,
+				11B0BB19278C958900960957 /* CoordinatesLocalDataSource.swift in Sources */,
 				11C5F4472773A09D0007C726 /* LocationSingleton.swift in Sources */,
 				11B0BB0D2788916A00960957 /* LocationListView.swift in Sources */,
 				11C5F456277414D50007C726 /* WeatherResponse.swift in Sources */,

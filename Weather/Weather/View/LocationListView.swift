@@ -19,7 +19,7 @@ struct LocationListView: View {
             }
             .listRowSeparator(.hidden)
             .listRowBackground(Color.clear)
-        }
+        }.listStyle(.grouped)
         
         .id(UUID())
         .task {
